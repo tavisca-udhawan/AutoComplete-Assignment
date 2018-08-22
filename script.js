@@ -6,6 +6,10 @@ function removeList(){
            x[i].parentNode.removeChild(x[i]);
     }
 }
+function closeIcon(){
+    document.getElementById("input-box").value=null;
+    document.getElementById("close-icon").style.visibility="false";
+}
 function autoComplete(){
     var elements,index;
     var list_data,count=0;
@@ -30,10 +34,9 @@ function autoComplete(){
                      list_data.innerHTML+=names[index].substr(0,alpha_check);
                      list_data.innerHTML+="<strong>"+names[index].substr(alpha_check,data.value.length)+"</strong>";
                      list_data.innerHTML+=names[index].substr(alpha_check+data.value.length,names[index].length);
-                     list_data.innerHTML+="<input type='hidden' value='"+names[index]+"'>";
-                     elements.addEventListener("click",function(e){
+                     list_data.innerHTML += "<input type='hidden' value='" + names[index] + "'>";
+                     list_data.addEventListener("click",function(e){
                      data.value=this.getElementsByTagName("input")[0].value;
-                     indexer+=1;
                      removeList();
                      });
                      count++;
