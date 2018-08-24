@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AutoComplete</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+    </head>
+    <body onclick="removeList()">
+        <header>
+            <span style="color:#0F21A4;">C</span>
+            <span style="color:#42A0B4;">H</span>
+            <span style="color:#F21E0D;">E</span>
+            <span style="color:#1E7111;">E</span>
+            <span style="color:#61D610;">T</span>
+            <span style="color:#1C6EDC;">A</span>
+            <span style="color:#645121;">H</span> 
+        </header>
+        <main>
+            <section id="input-form" class="form">
+               <div><span><input type="text" autocomplete="off" onkeyup="autoComplete(event)" onfocus="autoComplete(event)" class="field" id="input-box" placeholder="Enter Name"/>
+                <i class="cross-button" id="cross" onclick="editField()">&times;</i>
+                </span>
+               </div>
+               <input type="button" onclick="location.assign('success.html')" class="button" value="Search"/></div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

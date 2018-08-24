@@ -1,0 +1,54 @@
+body{
+    margin:0;
+    padding:0;
+    background:#DEDECC;
+}
+header{
+    justify-content: center;
+    font-size:7em;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+.form{
+    width:30%;
+    margin:0 auto;
+    font-size:1.5em;
+    text-align: center;
+}
+.button{
+    font-size:1em;
+    background-color: #2FAEE5;
+    margin-left: 0.5em;
+    margin-top: 1em;
+}
+.field{
+    font-size:1em;
+}
+.list div:hover{
+    background-color: #B3B7B8;
+    color:#F5210C;
+    cursor: pointer;
+}
+.list{
+    max-height: 6em;
+    overflow-y: auto;
+    width:70%;
+    margin:0 auto;
+}
+.cross-button:hover{
+    cursor:pointer;
+    color:#FF0000;
+}
+input[type=text]::-ms-clear{
+    display: none;
+}
+.cross-button{
+    margin-left:-1em;
+    visibility: hidden;
+}
+.focussing {
+    background-color: DodgerBlue !important; 
+    color: #ffffff; 
+  }
