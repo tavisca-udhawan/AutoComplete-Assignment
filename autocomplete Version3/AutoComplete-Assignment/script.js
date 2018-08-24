@@ -1,7 +1,7 @@
 var names = ["Ragul", "Rajpreet", "Pallvi", "Neha", "Ankita", "Raja", "Shreea", "Smriti", "Shrijeet", "Ayush", "Swapnil", "Nihit", "Bhargavi", "Anushka", "Swinal", "Utkarsh", "Saurabh", "Paarth", "Vishwas", "Mohit", "Gurbaksh", "Ashwarya"];
 names.sort();
 var focus;
-var count = 0;
+var count = 0,indexer1=0;
 var data = document.getElementById("input-box");
 function removeList() {
     var x = document.getElementsByClassName("list");
@@ -18,9 +18,9 @@ function autoComplete(e) {
     var ll = document.getElementById("listId");
     if (e.keyCode == 13) {
         e.preventDefault();
-        if (focus > -1) {
+        if (indexer1 >=0) {
             if (ll)
-                ll.childNodes[focus].click();
+                ll.childNodes[indexer1].click();
         }
         removeList();
     }
@@ -30,12 +30,15 @@ function autoComplete(e) {
         if (focus <= 0)
             focus = 0;
         ll.childNodes[focus].setAttribute("class", "focussing");
+        indexer1=focus;
         document.getElementById("listId").childNodes[focus].scrollIntoView(false);
     }
     else if (e.keyCode == 40) {
         ll.childNodes[focus].setAttribute("class", "focussing");
-        if (focus >= 1)
+        if (focus >= 1) {
             ll.childNodes[focus - 1].setAttribute("class", "div");
+        }
+        indexer1=focus;
         focus++;
         if (focus >= count)
             focus = count - 1;
